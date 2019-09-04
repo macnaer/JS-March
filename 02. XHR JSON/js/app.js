@@ -31,14 +31,22 @@ xhr.open("GET", url, true);
 
 function GetCurrency(currency){
     //console.log(currency);
-    
-    for (let i = 0; i < currency.length; i++){
-        console.log(currency[i].ccy, "  ", currency[i].base_ccy, " buy ", currency[i].buy, " sale ", currency[i].sale);
+    let currencyData = {
+        usd_uah_buy: currency[0].buy,
+        usd_uah_sell: currency[0].sale,
+        eur_uah_buy: currency[1].buy,
+        eur_uah_sell: currency[1].sale,
+        rub_uah_buy: currency[2].buy,
+        rub_uah_sell: currency[2].sale,
+        btc_usd_buy: currency[3].buy,
+        btc_uah_sell: currency[3].sale
     }
-
+    PrintCurrency(currencyData);
 }
 
-
+function PrintCurrency(currencyData) {
+    console.log(currencyData);
+}
 
 
 function ShowSwapiPerson(atm){
