@@ -29,7 +29,6 @@ xhr.open("GET", url, true);
     }; 
 }
 
-
 function GetCurrency(currency){
     //console.log(currency);
     
