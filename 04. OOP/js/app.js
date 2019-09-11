@@ -70,33 +70,104 @@ let state = {
 }
 
 
-class Person {
+// class Person {
 
-    constructor(name, surname, age, gender){
+//     constructor(name, surname, age, gender){
+//         this.name = name;
+//         this.surname = surname;
+//         this.age = age;
+//         this.gender = gender;
+//     }
+
+//     ShowPerson() {
+//         console.log("Name: ", this.name, " Surname: ", this.surname, " Age: ", this.age, " Gender: ", this.gender);
+//     }
+
+
+
+//     SayHello(name){
+//         console.log("Hello, my name is ", name);
+//     }
+// }
+
+// let Bill = new Person("Bill", "Smith", 35, "male");
+// Bill.ShowPerson();
+// Bill.SayHello("Bill");
+// Bill.name = 10050;
+// Bill.ShowPerson();
+
+// let Tom = new Person("Tom", "Tomson",23, "male" );
+// Tom.ShowPerson();
+// Tom.SayHello("Tommy");
+
+
+class Dog{
+    constructor(name,breed, age,power){
         this.name = name;
-        this.surname = surname;
+        this.breed = breed;
         this.age = age;
-        this.gender = gender;
+        this.power = power;
     }
 
-    ShowPerson() {
-        console.log("Name: ", this.name, " Surname: ", this.surname, " Age: ", this.age, " Gender: ", this.gender);
+    ShowDog(){
+        console.log("Name: ", this.name, " Breed: ", this.breed, " Age: ", this.age, " Power: ", this.power);
     }
 
+    Play(power){
+        if (this.power <= 0 || this.power >= 100) {
+            this.Die();
+        }
+        else{
+            this.power -= power;
+            console.log("Power after play => ", this.power);
+        }
+    }
 
+    Die(){
+        console.log(this.name, " is die!");
+    }
 
-    SayHello(name){
-        console.log("Hello, my name is ", name);
+    Eat(power){
+         if (this.power <= 0 || this.power >= 100) {
+             this.Die();
+         } else {
+             this.power += power;
+             console.log("Power after eat => ", this.power);
+         }
     }
 }
 
-let Bill = new Person("Bill", "Smith", 35, "male");
-Bill.ShowPerson();
-Bill.SayHello("Bill");
-Bill.name = 10050;
-Bill.ShowPerson();
+class HunterDog extends Dog{
+    constructor(name, breed, age, power, speed) {
+        super(name, breed, age, power);
+        this.speed = speed;
+    }
 
-let Tom = new Person("Tom", "Tomson",23, "male" );
-Tom.ShowPerson();
-Tom.SayHello("Tommy");
+    Hunt(power){
+        if (this.power <= 0 || this.power >= 100) {
+            this.Die();
+        } else {
+            this.power -= power;
+            console.log("Power after hunt => ", this.power);
+        }
+    }
 
+     ShowDog() {
+         console.log("Name: ", this.name, " Breed: ", this.breed, " Age: ", this.age, " Power: ", this.power, " Speed: ", this.speed);
+     }
+}
+
+let Bob = new HunterDog("Bob", "Labrador", 2, 60, 30);
+Bob.ShowDog();
+Bob.Hunt(70);
+Bob.Hunt(70);
+
+// let Mike = new Dog("Mike", "Taxa", 4, 50);
+// Mike.ShowDog();
+// Mike.Play(40);
+// Mike.ShowDog();
+// Mike.Eat(15);
+// Mike.ShowDog();
+// Mike.Play(60);
+// Mike.Play(60);
+// //  Mike.ShowDog();
