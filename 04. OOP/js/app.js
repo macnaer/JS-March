@@ -1,6 +1,5 @@
 window.addEventListener("load", Init);
 
-
 function Init(){
     let url = "https://swapi.co/api/people/";
     // Request(url, GetPerson);
@@ -71,63 +70,33 @@ let state = {
 }
 
 
+class Person {
 
-// Test2();
+    constructor(name, surname, age, gender){
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.gender = gender;
+    }
 
-// const Test2 = function(){
-//     console.log("Test2");
-// }
-
-
-
-// Test();
-
-// function Test(){
-//     console.log("Test");
-// }
+    ShowPerson() {
+        console.log("Name: ", this.name, " Surname: ", this.surname, " Age: ", this.age, " Gender: ", this.gender);
+    }
 
 
 
-// let a = 10;
-// let b = 130;
-// Init = (a , b) =>{
-//     return  a + b;
-   
-// } 
+    SayHello(name){
+        console.log("Hello, my name is ", name);
+    }
+}
 
+let Bill = new Person("Bill", "Smith", 35, "male");
+Bill.ShowPerson();
+Bill.SayHello("Bill");
+Bill.name = 10050;
+Bill.ShowPerson();
 
-// const res = Init(a, b);
-// console.log(res);
+let Tom = new Person("Tom", "Tomson",23, "male" );
+Tom.ShowPerson();
+Tom.SayHello("Tommy");
 
-
-
-// let Person = {
-//     name : "Bill",
-//     surname: "Gates",
-//     age: 58,
-//     data: {
-//         day: 23,
-//         month: 10,
-//         year: 1956
-//     }
-// }
-
-
-// console.log(Person.name);
-// console.log(Person.age);
-
-// let day = Person.data.day;
-
-
-// console.log("Day:", day);
-
-// console.log(Person.data);
-
-
-// let arr = [4,6,"Tom",[8678,3453,"Test"]];
-
-// console.log(arr);
-
-
-// let arrPerson = [Person,Person];
-// console.log(arrPerson);
