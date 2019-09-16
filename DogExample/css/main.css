@@ -1,0 +1,84 @@
+body {
+font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#dog {
+max-width: 750px;
+height: 340px;
+padding: 15px;
+border: 1px solid #c6c7cc;
+border-radius: 5px;
+margin: 0 auto;
+}
+
+form {
+border: 1px solid #c6c7cc;
+border-radius: 5px;
+width: 300px;
+height: 318px;
+display: inline-block;
+}
+
+fieldset {
+border: 0;
+margin: 0;
+padding: 0;
+}
+
+#result {
+color: #395870;
+font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
+width: 425px;
+float: right;
+}
+
+img {
+width: 425px;
+height: 300px;
+}
+
+label, input, select {
+display: block;
+color: #395870;
+font-weight: bold;
+margin: 0 auto;
+border-radius: 5px;
+width: 280px;
+}
+
+.dog-action {
+background: #f0f0f2;
+border-top: 1px solid #c6c7cc;
+padding: 10px;
+height: 88px;
+}
+
+.dog-action .btn {
+background: linear-gradient(#49708f, #293f50);
+border: 0;
+color: #fff;
+cursor: pointer;
+font-weight: bold;
+padding: 10px 25px;
+margin: 20px 0;
+}
+
+.dog-game-action{
+border: 1px solid #c6c7cc;
+border-radius: 5px;
+max-width: 750px;
+height: 200px;
+margin: 0 auto;
+padding: 15px;
+}
+
+h2{
+text-align: center;
+color: #395870;
+}
+
+#game{
+color: #395870;
+text-align: center;
+margin-top: 20px;
+}

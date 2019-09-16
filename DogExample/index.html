@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>OOP</title>
+<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="dog">
+<form name="dog-form">
+<fieldset class="dog-info">
+<label>
+Dog's name:<br>
+<input type="text" name="name" class="name"><br>
+<span class="nameSpan"></span>
+
+</label>
+<label>
+Dog's breed:<br>
+<select name="breed"  size="3" multiple>
+<option value="spitz">spitz</option>
+<option value="corgi">corgi</option>
+<option value="bottle">bottle</option>
+</select>
+</label><br>
+<label>
+Dog's age (between 1 and 17):<br>
+<input type="number" name="age" class="age" min="1" max="17"><br>
+<span class="ageSpan"></span>
+</label>
+</fieldset>
+<fieldset class="dog-action">
+<input class="btn" type="button" value="Create!" onclick="create()">
+</fieldset>
+</form>
+<div id="result"></div>
+</div>
+<div class="dog-game-action">
+<h2>Let's start game!</h2>
+<input type="button" value="Play" onclick="playGame()">
+<input type="button" value="Eat" onclick="eatGame()">
+<div id="game"></div>
+</div>
+<script src="js/app.js"></script>
+</body>
+
+</html>
