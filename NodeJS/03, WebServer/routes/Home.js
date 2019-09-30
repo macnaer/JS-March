@@ -4,7 +4,11 @@ const path = require("path");
 
 
 router.get("/", (req,res) => {
-     res.sendFile(path.join(__dirname, "../" ,"views", "index.html"));
+     res.render("index", {
+        title: "Node Pug",
+        h1: "Hello pug!",
+        name: "Bill"
+    });
 })
 
 module.exports = router;
